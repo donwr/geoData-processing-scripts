@@ -23,8 +23,8 @@ def main():
         description="Fetch all of the unique names associated with a zip code radius based on an input file"
     )
     parser.add_argument("json_file", help="JSON file containing list of cities")
-    parser.add_argument("zip_code", help="Starting zip code from search")
-    parser.add_argument("radius", help="Radius")
+    parser.add_argument("zip_code", default="", help="Starting zip code from search")
+    parser.add_argument("radius", default="", help="Radius")
     args=parser.parse_args()
 
     json_file = args.json_file
